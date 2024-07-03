@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nested Objects</title>
+</head>
+<body>
+	<h1>JavaScript Objects</h1>
+	<h2>Accessing Nested Objects</h2>
+	<p id="demo"></p>
+<script type="text/javascript">
+// we are now creating the nested object
+
+ const myObj={
+ 	name:"John",
+ 	age:30,
+ 	mycars:{
+ 		car1:"Ford",
+ 		car2:"BMW",
+ 		car3:"Fiat",
+ 	}
+ }	
+ let p1="mycars";
+ let p2="car2"+"car1";
+
+document.getElementById("demo").innerHTML=(myObj[p1][p2]);
+</script>
+</body>
+</html>

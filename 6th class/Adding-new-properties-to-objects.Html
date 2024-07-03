@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ADDING NEW PROPERTIES TO ODJECTS</title>
+</head>
+<body>
+	<h1>Javascript Object Properties</h1><br>
+	<h2>Adding a new property</h2><br>
+
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+    	
+    	const guy={
+
+    		firstname:"John",
+    		lastname:"Doe",
+    		age:50,
+    		haircolour:"Black"
+    	};
+
+    	guy.nationality="Indian";
+
+    	document.getElementById("demo").innerHTML= 
+    	(guy.firstname+" is "+guy.age+" years old and "+guy.nationality);
+    </script>
+</body>
+</html>

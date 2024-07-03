@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NEW DATE WHISHES</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var ddate= new Date();
+		var hrs= ddate.getHours();
+		document.write(prompt("Please enter Time",hrs));
+		if((hrs>=6)&& (hrs<=18))
+			{ if ((hrs>=6)&&(hrs<=12))
+		{
+           document.write("<br>"+"Good morning"+"<br>");
+		}
+		else if ((hrs>12)&&(hrs<15)) {
+			document.write("<br>"+"Good afternoon"+"<br>");
+		}
+		else { document.write("<br>"+"Good Night"+"<br>")}
+}
+
+	</script>
+
+</body>
+</html>

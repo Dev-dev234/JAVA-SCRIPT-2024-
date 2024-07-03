@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Objects</title>
+</head>
+<body>
+	<p id="demo">OBJECT PROGRAM</p>
+	<script type="text/javascript">
+		const man = {
+			Height: "6'1",
+			Hair: "Black",
+			weight: "85kg"
+		};
+
+		const woman = {
+			Height: "5'6",
+			Hair: "Blonde",
+			weight: "60kg"
+		};
+
+		const child = {
+			Height: "4'2",
+			Hair: "Brown",
+			weight: "30kg"
+		};
+
+		const pet = {
+			Species: "Dog",
+			Breed: "Labrador",
+			weight: "25kg"
+		};
+
+		document.getElementById("demo").innerHTML = 
+			"The Man's height is " + man.Height + "<br>" +
+			"The Man's hair is " + man.Hair + "<br>" +
+			"The Man's weight is " + man.weight + "<br><br>" +
+			"The Woman's height is " + woman.Height + "<br>" +
+			"The Woman's hair is " + woman.Hair + "<br>" +
+			"The Woman's weight is " + woman.weight + "<br><br>" +
+			"The Child's height is " + child.Height + "<br>" +
+			"The Child's hair is " + child.Hair + "<br>" +
+			"The Child's weight is " + child.weight + "<br><br>" +
+			"The Pet's species is " + pet.Species + "<br>" +
+			"The Pet's breed is " + pet.Breed + "<br>" +
+			"The Pet's weight is " + pet.weight + "<br>";
+	</script>
+</body>
+</html>

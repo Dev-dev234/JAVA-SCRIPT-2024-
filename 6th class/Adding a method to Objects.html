@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Adding a method to the OBJECT</title>
+</head>
+<body>
+	<h1>JavaScript Objects</h1>
+	<h2>Adding a method</h2>
+
+	<p id="demo"></p>
+<script type="text/javascript">
+	//We are now going to create an object
+
+	const person={
+     firstName:"Josh",
+     lastName:"Doe",
+     id:5566,
+	};
+	// Add a Method 
+
+	person.fun1=function(){
+
+		return this.firstName+" "+this.lastName;
+	};
+	// Displaying Odject Data
+
+	document.getElementById("demo").innerHTML=("My father is"+ person.fun1());
+</script>
+</body>
+</html>
