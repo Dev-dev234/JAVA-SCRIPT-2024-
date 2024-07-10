@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript program to find a square and a cube of a number</title>
+    </head>
+    <body>
+        <Table>
+            <tr>
+                <td> <input type="text" name="a" id="first" placeholder="Enter a number"></td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="square()">Submit</button>
+                </td>
+            </tr>
+        </Table>
+                <div id="num"></div>
+                <div id="num1"></div>
+                <script type="text/javascript">
+                    function square(){
+                        var x, Square, Cube;
+                     
+                        a=parseInt(document.getElementById("first").value);
+                    // Formulae for Square and cube
+                    Square=a*a;
+                    Cube=a*a*a;
+                    document.getElementById("num").innerHTML ="Square of "+a+"is:"+Square;
+                    document.getElementById("num1").innerHTML ="Cube of "+a+"is:"+Cube;
+                    
+                    }
+                </script>
+            
+       
+    </body>
+</html>
