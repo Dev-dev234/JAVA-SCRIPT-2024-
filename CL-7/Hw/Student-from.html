@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student-form</title>
+    </head>
+    <body onload="window.alert('Page successfully loaded ');">
+       
+<center><h1> Student form</h1></center>
+<form id="frm">
+    <h1> FORM </h1>
+<label for="Name">Name:</label>
+<input type="Textarea" id="Name" name="Name" placeholder="Enter Name here"><br>
+
+<label for="Address">Address:</label>
+<input type="Textarea" id="Address" name="Address" placeholder="Enter Your Address"><br>
+
+<label for="Student-id">Student-id:</label>
+<input type="Textarea" id="Student-id" name="Student-id" placeholder="Enter Student-id" onfocus="focus_event()"><br>
+
+<button onclick="fun_click()" >Submit</button>
+<button onclick="key_downevent()"> Exit</button>
+
+
+</form>
+
+
+<script>
+     <!--
+            function fun_click() {
+                document.write("The form has been submitted");
+            }//-->
+
+    function focus_event(){
+                 document.getElementById("frm").style.background= " lightblue";
+                }
+
+                function key_downevent(){
+            
+                document.write("You have exited the page!")
+            }           
+</script>
+    </body>
+</html>
