@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <Title>AddEventListener for button</Title>
+    </head>
+    <body>
+        <form action="Test.html" method="post" id="sexe" name="form">
+            <input type="text" id="nom" name="nom" minlength="2">
+            <input type="radio" id="Homme" name="sexe" value="Homme">
+            <input type="submit" value='Send'>
+        </form>
+
+        <script>
+            // Calling the entire form itself
+            let myForm = document.getElementById('sexe');
+            // Add the event to the From on Submit and then trigger the validation function
+            myForm.addEventListener('submit', validateForm)
+            // Validate form function
+            function validateForm(e){
+                // Get all inputs in the your form
+                let nom = document.getElementById('nom');// Text Input
+                let Homme = document.getElementById('Homme');// Radio Input
+                // Check Text input value if no empty
+                if(nom.value= ""){
+                    // Prevent From Submition
+                    e.preventDefalult();
+                    //Alert message
+                    alert('Name cannot be empty');
+                }
+                // Check if Radio Button Not checked
+                else if(!Homme.checked) {
+                    e.preventDefalult();
+                    alert('Radio button is required');
+                }
+            }
+        </script>
+    </body>
+</html>

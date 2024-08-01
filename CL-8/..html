@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mechanical energy</title>
+
+      
+    </head>
+    <body>
+      <table>
+        <tr>
+            <td>
+                <input type="textarea" name="a" id="first" placeholder="Enter mass of the object(kg)"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="textarea" name="b" id="second" placeholder="Enter the displacement of the object(m)"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="textarea" name="c" id="third" placeholder="Enter velocity of the object(m/s)"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 <button onclick="fun_1()">Enter</button>
+            </td>
+        </tr>
+      </table>
+      <div id="num"></div>
+      <div id="num1"></div>
+      <div id="num2"></div>
+
+
+         <script type="text/javascript">
+        function fun_1(){
+            var n, potential_energy, kinetic_energy;
+            m = document.getElementById("first").value;
+            h = document.getElementById("second").value;
+            v = document.getElementById("third").value;
+           var g = 9.8;
+
+
+           potential_energy= m*g*h;// formula for potential energy
+           kinetic_energy= (0.5)*m*v*v;// formula for kinetic energy
+         
+           mechanicalEnergy = potential_energy+kinetic_energy;
+           document.getElementById('num').innerHTML="potential energy:"+potential_energy+"J";
+           document.getElementById('num1').innerHTML="kinetic energy:"+kinetic_energy+"J";
+           document.getElementById('num2').innerHTML="mechanical energy:"+mechanicalEnergy+"J";
+        }
+    </script>
+    </body>
+
+   
+</html>

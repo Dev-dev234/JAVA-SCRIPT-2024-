@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <Title>AddEventListener for button</Title>
+    </head>
+
+   <body>
+ <button id="myButton">Click Here</button>
+ <script>
+    document.addEventListener('DOMContentLoaded',function()
+    {
+     // Get the button element by its ID
+     const button= document.getElementById('myButton');
+     // Add the event listener for the 'click' event
+     button.addEventListener('click', function(){
+        //code to execute when the button is clicked 
+        alert('Button was clicked!');
+     });
+    });
+ </script>
+   </body>
+</html>
