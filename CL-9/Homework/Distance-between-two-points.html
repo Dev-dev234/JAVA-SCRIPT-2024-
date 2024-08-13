@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Distance between 2 points</title>
+
+      
+    </head>
+    <body>
+      <table>
+        <tr>
+            <td>
+                <input type="textarea" name="a" id="first" placeholder="Enter x1 value"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="textarea" name="b" id="second" placeholder="Enter y1 value"/>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="textarea" name="c" id="third" placeholder="Enter x2 value"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="textarea" name="d" id="fourth" placeholder="Enter y2 value"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                 <button onclick="fun_1()">Enter</button>
+            </td>
+        </tr>
+        
+      </table>
+      <div id="num"></div>
+      
+
+
+         <script type="text/javascript">
+        function fun_1(){
+            
+            var x1 = parseFloat(document.getElementById("first").value);
+            var y1 = parseFloat(document.getElementById("second").value);
+            var x2 = parseFloat(document.getElementById("third").value);
+            var y2 = parseFloat(document.getElementById("fourth").value);
+
+
+          var X = x2-x1
+          var Y= y2-y1
+
+          var distance = Math.sqrt(X*X+Y*Y)
+          // This is the formula for the "finding distance between two points."
+
+           document.getElementById('num').innerHTML="Distance:"+distance+"units";
+          
+        }
+    </script>
+    </body>
+
+   
+</html>
