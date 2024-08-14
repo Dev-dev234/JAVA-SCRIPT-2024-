@@ -1,24 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Salary calculator</title>
-        <style>
-            body{
-                font-family: 'Courier New', Courier, monospace;
-                margin: 20px;
+<head>
+    <title>Salary calculator</title>
+    <style>
+        body{
+            font-family: 'Courier New', Courier, monospace;
+            margin: 20px;
+        }
+        .container{
+            max-width: 600px;
+            margin: auto;
+        }
+        .employee-info{
+            margin-bottom: 20px;
+        }
+        .result{
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Employee Salary calculator</h1>
+        <div class="employee-info">
+            <label for="employeeId">Employee Id:</label>
+            <input type="text" id="employeeId">
+        </div>
+
+        <div class="employee-info">
+            <label for="designation">Designation:</label>
+            <input type="text" id="designation">
+        </div>
+
+        <div class="employee-info">
+            <label for="salary">Basic Salary:</label>
+            <input type="number" id="salary" step="0.01">
+        </div>
+
+        <button id="calculateButton">Calculate Net Salary</button>
+
+        <div class="result" id="result"></div>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function(){
+            // Get references to the DOM elements
+            const calculateButton = document.getElementById('calculateButton');
+            const resultDiv = document.getElementById('result');
+
+            // Define the function to calculate salary
+            function calculateSalary(){
+                // Get input values
+                const id = document.getElementById('employeeId').value;
+                const designation = document.getElementById('designation').value;
+                const basicSalary = parseFloat(document.getElementById('salary').value);
+
+                if(isNaN(basicSalary) || basicSalary <= 0){
+                    resultDiv.innerHTML = "Please enter a valid salary.";
+                    return;
+                }
+
+                // HRA and DA Percentages 
+                const HRA_PERCENTAGE = 0.20; // 20% of Basic Salary
+                const DA_PERCENTAGE = 0.10; // 10% of Basic Salary
+
+                // Calculate HRA, DA, and Net Salary
+                const hra = basicSalary * HRA_PERCENTAGE;
+                const da = basicSalary * DA_PERCENTAGE;
+                const netSalary = basicSalary + hra + da;
+
+                // Display result
+                resultDiv.innerHTML = `
+                    <p><strong>Employee Id:</strong> ${id}</p>
+                    <p><strong>Designation:</strong> ${designation}</p>
+                    <p><strong>Basic Salary:</strong> $${basicSalary.toFixed(2)}</p>
+                    <p><strong>HRA:</strong> $${hra.toFixed(2)}</p>
+                    <p><strong>DA:</strong> $${da.toFixed(2)}</p>
+                    <p><strong>Net Salary:</strong> $${netSalary.toFixed(2)}</p>
+                `;
             }
-            .container{
-                max-width: 600px;
-                margin: auto;
-            }
-            .employee-info{
-                margin-bottom: 20px;
-            }
-            .result{
-                margin-top: 20px;
-                font-weight: bold;
-            }
-        </style>
-    </head>
-   
+
+            // Attach event listener to the button
+            calculateButton.addEventListener('click', calculateSalary);
+        });
+
+    </script>
+
+</body>
 </html>
