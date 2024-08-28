@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>JavaScript Program to print Floyd's triangle</title>
+        <script type="text/JavaScript">
+            function floyds() 
+            {
+                var n,j,i,number = 1;
+                n = parseInt(document.getElementById("first").value);
+                for(i=1; i<=n; i++)
+            {
+                for(j=1; j<=i; j++)
+            {
+                document.writeln(number+" ");
+                number++;
+            }
+              document.write("</br>");
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td><input type="text" name="a" id="first" placeholder="Enter No.of Rows"></td>
+
+            </tr>
+            <tr>
+                <td><button onclick="floyds()">Enter</button></td>
+            </tr>
+        </table>
+        <div id="num"></div>
+    </body>
+
+   
+</html>
