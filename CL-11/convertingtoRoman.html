@@ -1,1 +1,49 @@
-<html
+<html>
+<head>
+    <title>Roman Numerals</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><input type="text" name="a" id="first" placeholder="Enter Number"></td>
+        </tr>
+        <tr>
+            <td><button onclick="roman()">submit!</button></td>
+        </tr>
+    </table>
+    <div id="num"></div>
+    <p>If the number is more than 4000 or greater then the code won't work!</p>
+</body>
+<script type="text/JavaScript">
+    // Roman numbers
+
+    var roman_num = new Array();
+    roman_num=["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV",'I'];
+    //Decimal numbers
+
+    var numbers = new Array();
+    numbers=[1000,900,500,400,100,90,50,40,10,9,5,4,1];
+    function Roman(value) 
+    {
+     if(value<=0||value>=4000)
+     return value;
+    var romanletter="";
+    for (var j = 0; j < roman_num.length; j++) 
+    {
+        while (value>=numbers[j]) 
+        {
+            value-= numbers[j];
+            romanletter += roman_num[j];
+        }
+    }    
+    return romanletter;   
+    }
+    function roman() 
+    {
+        var n;
+        n = document.getElementById("first").value;
+        document.getElementById("num").innerHTML = "Roman letter for given number is:"+Roman(n);
+    }
+</script>
+
+</html>
